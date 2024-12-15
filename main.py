@@ -60,7 +60,7 @@ def get_books(
 ):
     return get_all_books(db, skip, limit)
 
-@app.get("/books/{author_id}", response_model=list[schemas.Book])
+@app.get("/authors/{author_id}/books", response_model=list[schemas.Book])
 def get_books_by_author(
         author_id: int,
         db: Session = Depends(get_db)

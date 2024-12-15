@@ -1,4 +1,5 @@
-from datetime import datetime, timezone
+from datetime import datetime
+from datetime import timezone
 
 from sqlalchemy.orm import Session
 
@@ -33,7 +34,6 @@ def get_author_by_id(db: Session, author_id: int):
 
 
 #Now work with books
-
 
 def get_all_books(
         db: Session,
